@@ -5,6 +5,8 @@ use App\Http\Controllers\AlbumPictureController;
 use App\Http\Controllers\PictureController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', fn() => to_route('register'));
+
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
