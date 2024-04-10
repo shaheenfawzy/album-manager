@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Album extends Model
 {
+    protected $fillable = ['name'];
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
